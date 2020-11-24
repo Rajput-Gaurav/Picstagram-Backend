@@ -1,0 +1,18 @@
+// run dotenv file very first:
+require("dotenv").config();
+const http = require("http");
+
+// import app:
+const app = require("../app");
+
+// create port:
+const PORT = process.env.PORT || 3000;
+// create server:
+const server = http.createServer(app);
+
+// console.log(process.env);
+
+// use fat arrow function:
+server.listen(PORT, () => {
+  console.log("Server started on port::" + PORT);
+});

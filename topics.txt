@@ -1,0 +1,125 @@
+Picstagram:
+-----------
+
+REST API
+--------
+GET /posts
+POST /posts [data]
+DELETE /posts/:id
+PUT /posts/:id [data]
+PATCH /posts/:id/activate
+PATCH /posts/:id/deactivate
+
+=============================
+Built in Libraries (modules):
+-----------------------------
+-http
+-path
+-----------------------------
+
+->Third Party Modules:
+	-Express	-javascript framework for Nodejs(very minimal)
+		-express.static()
+		-express.Router()
+	-nodemon	-monitor the code changes
+	-morgan		-logging the access	(middelware)
+	-dotenv		-override the environment variable(.env)
+	-body-parser	-get the body of put or post requests	(middelware)
+	-cors		-to solve cross origin request problem.	(middelware)
+	-mongoose	-ODM/ORM for MongoDb data.
+	-sequelize	-ORM for relation DB.
+	-node-oracledb	-Mysql.
+	-bcryptjs	-Encryption of Strings.
+	-jsonwebtoken	-For generating token for authentication.
+		-sign()
+		-verify()
+	-validator.js	-For validation.
+	-validator.js	-For Validation of Strings (Patterns), for filtering of data.
+-------------------------------------------------------------------------
+->Config:
+	app.set()
+	app.use()
+-----------------
+->HTTP Verbs:
+	app.get()
+	app.post()
+	app.put()
+	app.delete()
+	app.patch()
+
+->Request/Response:
+
+	req.params
+	req.query
+
+
+	res.send()
+	res.sendFile()
+	res.render()
+	res.json()
+	res.status()
+
+->Promises: Effectively habdle the async programming.
+------------
+	new Promise()
+	-resolve	-then()
+	-reject		-catch()
+
+-setTimeout()
+-setInterval()
+
+async
+await
+===================
+Middelware:
+-----------
+-it intercepts the request from client and processes it.
+-function(req, res, next) {}
+=======================================================
+
+MongoDB:
+--------
+-mongod	-Server
+-mongo	-Client
+
+->Steps to start a mongodb server:
+----------------------------------
+1-Install MongoDB
+2-Set the env variable path to the Bin Directory of MongoDB Installation
+3-Run the command:mongod --dbpath E:\ANGULAR-PROJECTS\data\db --port 27018
+4-Connect to the mongod server: mongo --host localhost:27018
+
+RDBMS		NoSQL
+Database	Database
+Table		Collection
+Rows		Documents (JSON documants)
+Fields		Fields/Keys
+
+MongoDB Queries:
+-show dbs;
+-use <dbname>;
+-db.<collection>.insert({foo: 'bar'});
+-db.createCollection();
+-db.<collection>.find();
+-db.<collection>.remove();
+-db.<collection>.drop();
+-db.<collection>.remove();
+-db.<collection>.drop();
+
+======================================
+Rxjs operators:
+---------------
+
+.pipe
+	-map()
+	-filter()
+.of
+=====================================
+HttpInterceptor:
+----------------
+	-Steps to create interceptor:
+	1- Create an interceptor and implement HttpInterceptor interface.
+	2- It has to be having the decorator @Injectable.
+	3- Register it in the providers array in main app module.
+
+	
